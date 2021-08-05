@@ -2,6 +2,7 @@ class Node:
     def __init__(self,data):
         self.data = data
         self.next = None 
+
 class Solution: 
     def insert(self,head,data):
             p = Node(data)           
@@ -15,6 +16,7 @@ class Solution:
                     start=start.next
                 start.next=p
             return head  
+            
     def display(self,head):
         current = head
         while current:
