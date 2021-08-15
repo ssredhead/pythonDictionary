@@ -1,9 +1,12 @@
 def in_range(num, lower, upper):
-  i = lower
-  for i in range(lower, upper+1):
-    if num == i:
-      return True
-    i += 1
+  #i = lower
+  #for i in range(lower, upper+1):
+   # if num == i:
+    #  return True
+    #i += 1
+  #return False
+  if(num >= lower and num <= upper:
+    return True
   return False
 
 
