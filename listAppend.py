@@ -1,7 +1,15 @@
-def append_size(lst):
-  lst.append(len(lst))
-  return lst
+def double_index(lst, index):
+  #check if index is too high
+  if index > len(lst):
+    return lst
+  else:
+    #Get lst up to index
+    new = lst[:index]
+  #double value of index
+  new.append(lst[index]*2)
+  #add the rest of the list
+  new = new + lst[index+1:] 
 
-#This function finds the length of a list and appends it to the end of the list
+  return new
 
-print(append_size([23, 42, 108]))
+print(double_index([3, 8, -10, 12], 2))
