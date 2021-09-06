@@ -1,8 +1,5 @@
 from movies import movie_dataset, movie_labels
 
-#print(movie_dataset['Bruce Almighty'])
-#print(movie_labels['Bruce Almighty'])
-
 def distance(movie1, movie2):
   squared_difference = 0
   for i in range(len(movie1)):
@@ -10,7 +7,7 @@ def distance(movie1, movie2):
   final_distance = squared_difference ** 0.5
   return final_distance
 
-def classify(unknown, dataset, k):
+def classify(unknown, dataset, labels, k):
   distances = []
   #Looping through all points in the dataset
   for title in dataset:
@@ -21,6 +18,14 @@ def classify(unknown, dataset, k):
   distances.sort()
   #Taking only the k closest points
   neighbors = distances[0:k]
-  return neighbors
-  
-print(classify([.4, .2, .9], movie_dataset, 5))
+  num_good = 0
+  num_bad = 0
+  for neighbor in neighbors:
+    title = neighbor[1]
+    if labels[title] == 0:
+      num_bad += 1
+    elif labels[title] == 1:
+      num_good += 1
+  return 1 if num_good > num_bad else 0
+
+print(classify([.4, .2, .9], movie_dataset, movie_labels, 5))
