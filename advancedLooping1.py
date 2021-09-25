@@ -1,4 +1,4 @@
-#Return greater sum of lists given 2 lists
+#Return greater sum of list given 2 lists
 def larger_sum(lst1, lst2):
   sum1 = 0
   sum2 = 0
