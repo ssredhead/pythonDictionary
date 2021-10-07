@@ -1,6 +1,7 @@
 from tic_tac_toe import *
 from copy import deepcopy
 
+#Simple minmax function where there are only 9 possible starting spaces
 def game_is_over(board):
   return has_won(board, "X") or has_won(board, "O") or len(available_moves(board)) == 0
 
