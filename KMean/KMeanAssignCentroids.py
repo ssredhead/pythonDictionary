@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from sklearn import datasets
 
-#centroids
+#centroids - the determining factor in the equations
 
 iris = datasets.load_iris()
 
