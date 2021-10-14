@@ -2,6 +2,7 @@ from connect_four import *
 import random
 random.seed(108)
 
+#removing useless branches so that the program can go deeper on useful branches
 def minimax(input_board, is_maximizing, depth, alpha, beta):
   # Base case - the game is over, so we return the value of the board
   if game_is_over(input_board) or depth == 0:
