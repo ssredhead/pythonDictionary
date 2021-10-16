@@ -2,6 +2,10 @@ from connect_four import *
 
 def random_eval():
   return random.randint(-100, 100)
+
+def my_evaluate_board(board):
+  if has_won(board, "X"):
+    return float("Inf")
 def two_ai_game():
     my_board = make_board()
     while not game_is_over(my_board):
