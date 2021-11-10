@@ -19,7 +19,7 @@
 def rotate(my_list, num_rotations):
   rotate_char = ""
   while num_rotations > 0:
-    rotate_char = my_list.pop(0)
+    rotate_char = my_list.pop(0) #remove value from start of list, (i.e. reverse rotation)
     my_list.append(rotate_char)
     num_rotations -= 1
   
