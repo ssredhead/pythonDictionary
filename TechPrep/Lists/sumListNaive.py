@@ -25,7 +25,7 @@ def maximum_sub_sum(my_list):
   
   return max_sum
 
-#Time complexity: O(n^3) because you loop through the list n * n * n times with the two for loops and the sum
+#Time complexity: O(n^3) because you loop through the list n * n * n times with the two for loops and the sum (copied list)
 #Space complexity: O(n) because we copy my_list with the slice operator
 
 

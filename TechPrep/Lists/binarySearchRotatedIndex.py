@@ -1,5 +1,5 @@
 # find rotation point 
-# O(logN) time requirement
+# O(logN) time requirement -> search algorithms
 # return index of "rotation point" element
 
 #target value will be less than both the next and previous values 
