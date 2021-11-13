@@ -36,7 +36,7 @@ def merge(linked_list_a, linked_list_b):
     #Store that head node so we can use it to initialize our return instance of LinkedList. 
     #We’re storing another reference because we’ll overwrite start_node repeatedly 
     #as we build out the list.
-    head = start 
+    head = start
 
     while current_a or current_b: #account for different lengths of a and b
         if not current_a: #make sure there is a next node, if not, b is the only option

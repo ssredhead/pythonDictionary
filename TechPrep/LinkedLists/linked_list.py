@@ -28,6 +28,38 @@ class LinkedList:
 
     return self
 
+  #Write a method which returns the node that is n nodes from the tail of the linked list.
+
+  #If n is 0, we would return the tail node, if n is 1, we would return the second to last node, 
+  # and so on.
+
+  #takes one argument:
+  #the number of nodes counting from the tail.
+  #return the node instance at that location.
+  def n_from_last(self, n):
+    nodes_left = self.size() - 1 - n #size - 1 because ll stats at index 0, - n to get the node from tail to return
+    tracker = 0
+    current = self.head
+    while tracker < nodes_left:
+      current = current.next
+      tracker += 1
+  
+    return current
+
+  def remove_duplicates(self):
+    prev = self.head #start with head
+    current = prev.next #get second node in list
+    while current.next is not None: #until the end of the list
+      if prev.val == current.val: #if the values are the same (duplicates)
+        current = current.next #this is the duplicate, move the current pointer to the next node
+        prev.next = current #this is the original. Move it's pointer to the node after the duplicate
+        #this essentially "removes" the duplicate
+      else:
+        #If they aren't duplicates, move prev 1 node right, move current 1 node right (no skips)
+        prev.next = current
+        current = current.next
+    return self
+
   def add(self, val):
     new_head = Node(val)
     new_head.next = self.head
