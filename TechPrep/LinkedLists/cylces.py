@@ -45,6 +45,8 @@ def has_cycle(linked_list):
     if slow == fast: #compare the nodes, not the values. If slow and fast are on the same node, fast has cycled back, return true
       return True
 
+#This approach takes linear time (O(N)) and is an in-place solution, so O(1) space complexity
+
 cycle_result = has_cycle(cycle_linked_list)
 no_cycle_result = has_cycle(no_cycle_linked_list)
 
