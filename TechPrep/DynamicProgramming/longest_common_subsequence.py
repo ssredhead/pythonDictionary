@@ -23,9 +23,22 @@ def longest_common_subsequence(string_1, string_2):
   
   for row_line in grid:
     print(row_line)
-  return grid[-1][-1] #last index holds best value
+  # return grid[-1][-1] #last index holds best value
+  # construct subsequence - if we want to return the lcs, not the count
+  result = []
+  while row > 0 and col > 0:
+    if string_1[col - 1] == string_2[row - 1]:
+      result.append(string_1[col - 1])
+      row -= 1
+      col -= 1
+    elif grid[row - 1][col] > grid[row][col - 1]:
+      row -= 1
+    else:
+      col -= 1
+  result.reverse()
+  return "".join(result)
 
-longest_common_subsequence(dna_1, dna_2)
+print(longest_common_subsequence(dna_1, dna_2))
 
 #O (N * M) implementation
 
@@ -80,3 +93,4 @@ longest_common_subsequence(dna_1, dna_2)
 # [G, 1, 1, 2, 3, 3, 3]
 # [T, 1, 2, 2, 3, 3, 3]
 # [T, 1, 2, 2, 3, 3, 3] <- highest value
+# CCG <- lcs
