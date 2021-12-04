@@ -19,4 +19,4 @@ sandro = Student("Sandro Botticelli", 12)
 pieter = Student("Pieter Bruegel the Elder", 8)
 
 grade1 = Grade(100)
-pieter.add_grade(grade1)
+pieter.add_grade(grade1)=
