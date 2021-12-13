@@ -5,7 +5,7 @@ class Student:
     self.grades = []
 
   def add_grade(self, grade):
-    if type(grade) == Grade:
+    if type(grade) == Grade: #this how to use multiple class types together.
       self.grades.append(grade)
 
 class Grade:
