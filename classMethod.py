@@ -1,3 +1,5 @@
+
+#reference class methods with dot notation
 class Circle:
   pi = 3.14
   
