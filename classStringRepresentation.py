@@ -10,6 +10,8 @@ class Circle:
   def circumference(self):
     return self.pi * 2 * self.radius
   
+  #This is a function that just returns a string representation of one or more class members
+  
   def __repr__(self):
     return "Circle with radius {radius}".format(radius=self.radius)
   
