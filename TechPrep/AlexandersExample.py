@@ -75,3 +75,8 @@ priorityQueue = [
 #Adjacency lists - used to store graphs (preferred for large, sparse graph)
 
 #Priority queues are implemented with a heap. The key values for the priority inform the heap
+
+# The domain of problems things like A* solve is called "State Space Search". Graph renderings of grids are a very intuitive subdomain but are not the only subdomain, the whole considers searching through "state spaces" , where "space" is used in this case in a similar way to a vector space.
+# One can write pretty good non-AI programs to play chess which use SSS.
+# The board-configuration is the state, valid moves are transitions between the states.
+# Its massively more complex than our example, but the domain is the same, and you don't need AI to make a grandmaster level program.
