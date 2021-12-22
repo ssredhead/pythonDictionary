@@ -4,6 +4,8 @@ string_3 = "bar"
 string_4 = "at"
 string_5 = "cats"
 
+#finds the distance between two strings using sets
+
 def edit_distance(string_1, string_2):
     set_1 = set(string_1)
     set_2 = set(string_2)
